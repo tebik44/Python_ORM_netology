@@ -44,7 +44,7 @@ class Sale(Base):
 
     id = sql.Column(sql.Integer, primary_key=True)
     price = sql.Column(sql.String, nullable=False)
-    data_sale = sql.Column(sql.Date)
+    date_sale = sql.Column(sql.DateTime, nullable=False)
     id_stock = sql.Column(sql.Integer, sql.ForeignKey("stock.id"), nullable=False)
     count = sql.Column(sql.Integer, nullable=False)
 
